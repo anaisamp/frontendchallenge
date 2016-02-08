@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Bank Dashboard</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="app/css/styles.css">
+</head>
+<body>
+    <div id="page-wrapper">
+        <div id="canvas">
+            <div id="offcanvas-menu">
+                <div class="user-container">
+                    <div class="user">
+                        <img class="user-photo img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/jadlimcaco/73.jpg" />
+                        <span class="user-name">John Due</span>
+                    </div>
+                </div>
+                <ul class="list-unstyled menu-container">
+                    <li class="menu-item"><a href="#"><img src="app/images/ic-dashboard.svg"> Dashboard</a></li>
+                    <li class="menu-item"><a href="#"><img src="app/images/ic-accounts.svg"> Accounts</a></li>
+                    <li class="menu-item"><a href="#"><img src="app/images/ic-cards.svg"> Cards</a></li>
+                    <li class="menu-item"><a href="#"><img src="app/images/ic-payments.svg"> Payments</a></li>
+                    <li class="menu-item"><a href="#"><img src="app/images/ic-transfers.svg"> Transfers</a></li>
+                    <li class="menu-item"><a href="#"><img src="app/images/ic-airtime.svg"> Airtime</a></li>
+                    <li class="menu-item"><a href="#"><img src="app/images/ic-settings.svg"> Settings</a></li>
+                </ul>
+            </div>
+
+            <div class="nav-container">
+                <a data-href="#" class="navbar-toggle toggle-nav btn btn-link">
+                    <span class="icon-bar icon-bar-3x"></span>
+                    <span class="icon-bar icon-bar-2x"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <h2 class="text-center">Dashboard</h2>
+            </div>
+
+            <div id="carousel-dashboard" class="carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#carousel-dashboard" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-dashboard" data-slide-to="1"></li>
+              </ol>
+
+              <div class="carousel-inner" role="listbox">
+                <div class="item active text-center">
+                  <h3>Balance</h3>
+                  <h1>N979153.36</h1>
+                  <h2>16.500 SP</h2>
+                </div>
+                <div class="item text-center">
+                    <h3>Balance</h3>
+                    <h1>N979153.36</h1>
+                    <h2>16.500 SP</h2>
+                </div>
+              </div>
+            </div>
+
+            <div class="transactions-container">
+                <div class="transactions-title">
+                    <h3>Last Transations</h3>
+                </div>
+                <ul class="transactions-list list-unstyled">
+                    <li class="transaction-item">
+                        <h4>
+                            <span class="pull-left transaction-description">ATM Lagos</span>
+                            <span class="pull-right debit">- N 450.00</span>
+                        </h4>
+                        <h5>
+                            <span class="pull-left transaction-date">Today</span>
+                            <span class="pull-right transaction-type">Bank Withdraw</span>
+                        </h5>
+                    </li>
+                    <li class="transaction-item">
+                        <h4>
+                            <span class="pull-left transaction-description">ATM Lagos</span>
+                            <span class="pull-right credit">+ N 450.00</span>
+                        </h4>
+                        <h5>
+                            <span class="pull-left transaction-date">Yesterday</span>
+                            <span class="pull-right transaction-type">Bank Deposit</span>
+                        </h5>
+                    </li>
+                    <li class="transaction-item">
+                        <h4>
+                            <span class="pull-left transaction-description">003 645 6548 65</span>
+                            <span class="pull-right debit">- 100 SP</span>
+                        </h4>
+                        <h5>
+                            <span class="pull-left transaction-date">01/06/2015</span>
+                            <span class="pull-right transaction-type">Airtime recharge</span>
+                        </h5>
+                    </li>
+                    <li class="transaction-item">
+                        <h4>
+                            <span class="pull-left transaction-description">John Doe</span>
+                            <span class="pull-right debit">+ N 450.00</span>
+                        </h4>
+                        <h5>
+                            <span class="pull-left transaction-date">31/05/2015</span>
+                            <span class="pull-right transaction-type">Transfer</span>
+                        </h5>
+                    </li>
+                </ul>
+
+            </div>
+
+                <!-- #site-canvas -->
+            </div>
+            <!-- #site-wrapper> -->
+        </div>
+        <div class="overlay"></div>
+
+        <!-- Scripts -->
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+        <script src="app/js/offcanvas.js"></script>
+    </body>
+</html>

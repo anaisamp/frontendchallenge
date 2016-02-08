@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Hacker News</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+<h1>Hacker News</h1>
+<div ng-app='myApp' ng-controller='HackerNewsController'>
+  <div infinite-scroll='nextPage()' infinite-scroll-disabled='busy' >
+    <div ng-repeat='item in items'>
+      <span class='index'>{{$index + 1}}.</span>
+      <span class='title'>
+        <a ng-href='{{item.url || "https://news.ycombinator.com/item?id="+item.objectID}}' target='_blank'>{{item.title}}</a>
+      </span>
+      <small>
+          <span class='points'>{{item.points}}</span> point<span ng-if='item.points !== 1'>s</span>
+          <span class='author'>by {{item.author}} </span>
+          <span class='date'>{{item.created_at|timeago}} </span> -
+          <a ng-href='https://news.ycombinator.com/item?id={{item.objectID}}' target='_blank'>{{item.num_comments}} comment<span ng-if='item.num_comments !== 1'>s</span> </a>
+      </small>
+      <div style='clear: both;'></div>
+    </div>
+    <div ng-show='busy'>Loading data...</div>
+    <div ng-show="reachLast">No more data to display.</div>
+  </div>
+
+</div>
+<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+<script src="app/modules/ng-infinite-scroll.min.js"></script>
+<script src="app/modules/ng-timeago.js"></script>
+<script src="app/app.js"></script>
+<script src="app/controllers/hackerNewsCtrl.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+@font-face {
+    font-family: "ProximaNovaSoft";
+    src: url("../fonts/ProximaNovaSoft-Regular.otf");
+}
+@font-face {
+    font-family: "ProximaNovaSoft";
+    src: url("../fonts/ProximaNovaSoft-Medium.otf");
+    font-weight: 400;
+}
+@font-face {
+    font-family: "DProximaNovaSoft";
+    src: url("../fonts/ProximaNovaSoft-Semibold.otf");
+    font-weight: 600;
+}
+@font-face {
+    font-family: "ProximaNovaSoft";
+    src: url("../fonts/ProximaNovaSoft-Bold.otf");
+    font-weight: 900;
+}
+
+#site-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+
+  height: 500px; /* Temp: Simulates a tall page. */
+}
+#site-canvas {
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+
+  -webkit-transition: 300ms ease all;
+  transition: 300ms ease all;
+
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+
+}
+.show-nav #site-canvas {
+  -webkit-transform: translateX(300px);
+  transform: translateX(300px);
+
+  -webkit-transform: translate3d(300px, 0, 0);
+  transform: translate3d(300px, 0, 0);
+}
+#site-menu {
+  width: 300px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -300px;
+  background: #428bca;
+  padding: 15px;
+}
+
+/* Just styles... Not relevant to demo */
+body {
+    font-family: 'ProximaNovaSoft';
+}
+
+.title { background: #77439e; }
+.title .toggle-nav { color: #ffffff; float: left; padding: 7px 4px;
+    margin: 13px 0 13px 13px; }
+.title h3 {margin: 0 0 0 7px; font-size: 14px; font-weight: 400; color: #fff; line-height: 42px; }
+.title h2 { margin: 0; font-size: 20px; color: #ffffff; line-height: 56px;}
+.navbar-toggle .icon-bar { width: 10px; background: #ffffff; }
+.navbar-toggle .icon-bar.icon-bar-2x { width: 15px;}
+.navbar-toggle .icon-bar.icon-bar-3x { width: 20px;}
+.carousel { background: purple; color: #ffffff; padding: 20px 0 60px 0;}
+.carousel-indicators li { background: #ffffff; opacity: 0.5; border:0; margin: 0;}
+.carousel-indicators .active { background: #ffffff; opacity: 1; border:0; height: 10px; width: 10px; }
+
+.carousel h1 { font-family: 'ProximaNovaSoft'; font-weight: 600; font-size:32px; line-height: 119%; }
+.carousel h2 { font-family: 'ProximaNovaSoft'; font-weight: 600; font-size:24px; line-height: 121%; }
+.carousel h3 { font-family: 'ProximaNovaSoft'; font-size:18px;  }
